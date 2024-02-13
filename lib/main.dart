@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MainApp());
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -10,13 +10,34 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter Widget"),
-          backgroundColor: Colors.blueAccent,
+          title: const Text("WhatsApp"),
+          backgroundColor: const Color.fromRGBO(0, 128, 105, 1),
+          actions: const [
+            Icon(
+              Icons.camera_alt_outlined,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Icon(
+              Icons.more_vert,
+              color: Colors.white,
+            ),
+          ],
         ),
-        backgroundColor: Colors.grey,
-        body: Text("Hello"),
+        backgroundColor: Colors.white,
+        body: const Text("Hello World"),
       ),
     );
   }
